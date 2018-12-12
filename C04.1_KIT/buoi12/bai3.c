@@ -19,7 +19,7 @@ int main() {
 	printf("Nhap mang a2: "); n2=nhapmang(a2, n2);
 	printf("Nhap x: "); scanf("%d", &x);
 	if(x<0) return 0;
-	for(int i=0; i<((n1+n2)+(n1-n2))/2; i++) {
+	for(int i=0; i<((n1+n2)+abs(n1-n2))/2; i++) {
 		if(a1[i] && a2[i]) {
 			for(int q=-abs(x); q<=x; q++) {
 				if(a2[i+q] && a1[i]==a2[i+q]) {
